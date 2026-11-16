@@ -128,7 +128,7 @@ footer p {
     }
 }
 /* Centra el reproductor y limita su ancho */
-.contenedor-spotify {
+.contenedor-sound {
   max-width: 450px;       /* Ancho máximo del reproductor */
   margin: 40px auto;      /* Lo centra horizontalmente */
   border-radius: 12px;    /* Coincide con el borde redondeado de Spotify */
