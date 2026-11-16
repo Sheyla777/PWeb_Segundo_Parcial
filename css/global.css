@@ -1,0 +1,158 @@
+:root {
+    color-scheme: dark;
+    --color-1: #f2f1e4;
+    --color-2: #bec8d2;
+    --color-4: #86c9eb;
+    --panel: #142b3a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--color-1);
+    background: linear-gradient(#07111bea, #07111bf5), url("../img/wallpaper_MIB.jpeg") center / cover fixed;
+    font: 1rem/1.55 system-ui, sans-serif;
+}
+
+.cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem 1.5rem;
+    padding: .85rem max(1rem, calc((100% - 65rem) / 2));
+    background: #0a1a27;
+    border-bottom: 1px solid #39546a;
+}
+
+.marca img {
+    display: block;
+    width: 11rem;
+    max-height: 4rem;
+    object-fit: cover;
+    border-radius: .25rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+}
+
+a {
+    color: var(--color-4);
+}
+
+nav a {
+    padding: .45rem .7rem;
+    color: var(--color-1);
+    text-decoration: none;
+    border-radius: .25rem;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background: #213d50;
+    color: #d2efff;
+}
+
+:focus-visible {
+    outline: 2px solid #b7eeff;
+    outline-offset: 3px;
+}
+
+.contenido {
+    flex: 1;
+    width: min(100% - 2rem, 58rem);
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+}
+
+h1 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(1.85rem, 6vw, 3rem);
+    line-height: 1.15;
+}
+
+h2 {
+    line-height: 1.25;
+}
+
+article {
+    margin-bottom: 1rem;
+    padding: clamp(1rem, 4vw, 2rem);
+    background: var(--panel);
+    border: 1px solid #39546a;
+    border-radius: .55rem;
+}
+
+article p:last-child {
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.imagen-portada {
+    width: 100%;
+    max-height: 28rem;
+    object-fit: contain;
+}
+
+footer {
+    padding: 1rem;
+    background: #0a1a27;
+    border-top: 1px solid #39546a;
+    text-align: center;
+    color: var(--color-2);
+    font-size: .875rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 35rem) {
+    nav a {
+        padding-inline: .5rem;
+        font-size: .94rem;
+    }
+}
+/* Centra el reproductor y limita su ancho */
+.contenedor-spotify {
+  max-width: 450px;       /* Ancho máximo del reproductor */
+  margin: 40px auto;      /* Lo centra horizontalmente */
+  border-radius: 12px;    /* Coincide con el borde redondeado de Spotify */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra elegante */
+}
+
+/* Diseno de peliculas.html */
+.peliculas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.peliculas > h1 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.peliculas > article {
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    .peliculas {
+        grid-template-columns: 1fr;
+    }
+}

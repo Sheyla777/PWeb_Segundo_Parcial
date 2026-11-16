@@ -1,0 +1,37 @@
+.actor {
+    display: grid;
+    grid-template-columns: minmax(7rem, 12rem) minmax(0, 1fr);
+    gap: .65rem 1.5rem;
+    align-items: start;
+}
+
+.actor img {
+    grid-row: 1 / span 4;
+    width: 100%;
+    max-height: 15rem;
+    object-fit: contain;
+    object-position: top;
+}
+
+.actor h2,
+.actor p {
+    grid-column: 2;
+    margin: 0;
+}
+
+@media (max-width: 37rem) {
+    .actor {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .actor img,
+    .actor h2,
+    .actor p {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .actor img {
+        width: min(100%, 11rem);
+    }
+}
