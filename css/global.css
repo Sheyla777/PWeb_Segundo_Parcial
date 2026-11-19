@@ -162,3 +162,52 @@ footer p {
         grid-column: 1;
     }
 }
+
+.seccion-produccion,
+.seccion-animacion {
+    background-color: #142b3a;
+    border: 1px solid #39546a;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.seccion-produccion h2,
+.seccion-animacion h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contenido-animacion {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.contenido-animacion img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.contenido-animacion p:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 640px) {
+    .seccion-produccion,
+    .seccion-animacion {
+        padding: 15px;
+    }
+
+    .contenido-animacion {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-animacion img {
+        width: 200px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
